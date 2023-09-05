@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+    <title>Listagem de Salários</title>
+</head>
+<body>
+<h1>Listagem de Salários</h1>
+
+<table border="1">
+    <tr>
+        <th>Nome Pessoa</th>
+        <th>Cargo</th>
+        <th>Salário</th>
+    </tr>
+    <ui:repeat value="#{salarioBean.salarios}" var="salario">
+        <tr>
+            <td>#{salario.nomePessoa}</td>
+            <td>#{salario.cargo}</td>
+            <td>#{salario.valorSalario}</td>
+        </tr>
+    </ui:repeat>
+</table>
+</body>
+</html>
